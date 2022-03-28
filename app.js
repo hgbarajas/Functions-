@@ -1,15 +1,16 @@
-// alert("Welcome to Tempature Converter")
+alert("Welcome to Tempature Converter")
 
-// function askName() {
-//     var name = prompt("What is your name?")
-//     return name
-// }
+function askName() {
+    var name = prompt("What is your name?")
+    return name
+ }
 
-// function greet(a) {
-//     alert(`Hello ${a}.`)
-// }
+function greet(a) {
+    alert(`Hello ${a}.`)
+ }
+var a = (askName)
 
-// greet(askName())
+ greet(askName())
 
 function askTempature() {
     var temp = prompt("Type a tempature you want to convert")
@@ -21,8 +22,6 @@ function ctofConversion(f) {
     var tempcf = ((temp * 9)/5)+32; 
     return tempcf
 }
-ctofConversion(askTempature())
-
 
 
 function ftocConversion(c) {
@@ -30,27 +29,26 @@ function ftocConversion(c) {
     return tempfc
 }
 
-ftocConversion(askTempature())
-
 
 function askConversion() {
     var convert = prompt("If you want to convert from celsius to farenheit click f \n If you want to convert from farenheit to celsius click c")
     return convert
 }
 
+askConversion()
 
-function convert(tempcf, tempfc) { // check parameters // add placeholders
+function convert( tempcf, tempfc ) { // check parameters // add placeholders
     if (convert == "f" ) {
-        alert(`${temp} celsius is ${tempfc} farenheit.`)
+        alert(`${askTempature()} celsius is ${ftocConversion()} farenheit.`)
     }
     else if (convert == "c") {
-        alert(`${temp} farenheit is ${tempcf} celsius.`)
+        alert(`${askTempature()} farenheit is ${ctofConversion()} celsius.`)
     }
+    return convert
 }
 
+convert()
 
+// ((tempcf * 9)/5)+32
 
-// ((tempcf * 9)/5)+32; 
-
-// ((tempfc - 32)* 5)/9;
-
+// ((tempfc - 32)* 5)/9
